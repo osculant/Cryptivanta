@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cryptivanta — Elite crypto consulting for high-net-worth investors and institutions in the United States. Data-driven strategies, US-compliant solutions, institutional-grade security."
+    />
+    <title>Cryptivanta | Elite Crypto Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap");
+
+      :root {
+        --primary: #6c5ce7;
+        --accent: #00d1ff;
+      }
+
+      .tail-container {
+        font-family: "Inter", system_ui, sans-serif;
+      }
+
+      .logo-font {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .hero-bg {
+        background:
+          radial-gradient(
+            circle at 50% 30%,
+            rgba(108, 92, 231, 0.25) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(0, 209, 255, 0.18) 0%,
+            transparent 70%
+          );
+        animation: gradientShift 25s ease infinite;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .nav-link {
+        position: relative;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background: linear-gradient(to right, #6c5ce7, #00d1ff);
+        transition: width 0.4s ease;
+      }
+
+      .nav-link:hover:after {
+        width: 100%;
+      }
+
+      .service-card {
+        transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .service-card:hover {
+        transform: translateY(-16px) scale(1.03);
+        box-shadow: 0 25px 50px -12px rgb(108 92 231 / 0.4);
+      }
+
+      .glow-purple {
+        box-shadow: 0 0 35px -5px rgb(108 92 231);
+      }
+
+      .price-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .price-card.popular {
+        transform: scale(1.06);
+        z-index: 10;
+      }
+
+      .blockchain-line {
+        position: absolute;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #00d1ff, transparent);
+        animation: lineMove 8s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="tail-container bg-[#0B0F1A] text-white overflow-x-hidden">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 glass border-b border-white/10">
+      <div
+        class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div
+            class="w-9 h-9 rounded-2xl bg-gradient-to-br from-[#6C5CE7] to-[#00D1FF] flex items-center justify-center text-2xl font-bold logo-font"
+          >
+            C
+          </div>
+          <div>
+            <span
+              class="text-3xl font-semibold tracking-tighter logo-font text-white"
+              >Cryptivanta</span
+            >
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center gap-10 text-sm font-medium">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#insights" class="nav-link">Insights</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <button
+            onclick="
+              document
+                .getElementById('contact')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+            class="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/30 rounded-2xl text-sm font-medium transition-all"
+          >
+            Book Consultation
+          </button>
+          <button
+            onclick="toggleMobileMenu()"
+            class="md:hidden w-10 h-10 flex items-center justify-center text-2xl"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden fixed inset-0 bg-[#0B0F1A] z-50 pt-20 px-6"
+      >
+        <div class="flex flex-col gap-6 text-lg font-medium">
+          <a
+            href="#home"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >Home</a
+          >
+          <a
+            href="#services"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >Services</a
+          >
+          <a
+            href="#about"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >About</a
+          >
+          <a
+            href="#pricing"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >Pricing</a
+          >
+          <a
+            href="#insights"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >Insights</a
+          >
+          <a href="#contact" onclick="toggleMobileMenu()" class="py-3"
+            >Contact</a
+          >
+          <button
+            onclick="
+              toggleMobileMenu();
+              document
+                .getElementById('contact')
+                .scrollIntoView({ behavior: 'smooth' });
+            "
+            class="mt-6 w-full py-4 bg-gradient-to-r from-[#6C5CE7] to-[#00D1FF] rounded-3xl font-semibold text-lg"
+          >
+            Book a Consultation
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="min-h-screen relative flex items-center hero-bg">
+      <!-- Subtle animated lines -->
+      <div
+        class="blockchain-line w-96 top-20 left-10"
+        style="animation-delay: 0s"
+      ></div>
+      <div
+        class="blockchain-line w-64 top-40 right-20"
+        style="animation-delay: 3s"
+      ></div>
+      <div
+        class="blockchain-line w-80 bottom-32 left-1/3"
+        style="animation-delay: 6s"
+      ></div>
+
+      <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <div class="max-w-3xl text-center">
+          <div
+            data-aos="fade-up"
+            class="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-3xl px-6 py-2 text-sm mb-8"
+          >
+            <div
+              class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"
+            ></div>
+            Now accepting Q2 2026 mandates
+          </div>
+
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="text-6xl md:text-7xl font-semibold tracking-tighter leading-none logo-font mb-6"
+          >
+            Elite Crypto Consulting<br />for Serious Investors
+          </h1>
+
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="text-xl text-[#A0AEC0] max-w-2xl mx-auto mb-12"
+          >
+            Your Strategic Edge in Crypto Markets
+          </p>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="flex flex-col sm:flex-row gap-5 justify-center"
+          >
+            <button
+              onclick="
+                document
+                  .getElementById('contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+              class="group px-10 py-6 bg-gradient-to-r from-[#6C5CE7] to-[#00D1FF] rounded-3xl font-semibold text-lg flex items-center justify-center gap-3 hover:scale-105 transition-all"
+            >
+              Get Started
+              <i
+                class="fa-solid fa-arrow-right group-active:rotate-45 transition"
+              ></i>
+            </button>
+
+            <button
+              onclick="
+                document
+                  .getElementById('contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+              class="px-10 py-6 border border-white/30 hover:border-white/60 rounded-3xl font-medium text-lg transition-all"
+            >
+              Schedule a Call
+            </button>
+          </div>
+
+          <div
+            class="mt-16 flex justify-center items-center gap-12 text-xs uppercase tracking-widest text-[#A0AEC0]"
+          >
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+              SOC 2 Certified
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-lock text-emerald-400"></i>
+              256-bit Encryption
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-flag-usa text-emerald-400"></i>
+              US Regulated
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust bar -->
+      <div
+        class="absolute bottom-12 left-1/2 -translate-x-1/2 glass px-10 py-5 rounded-3xl flex items-center gap-10 text-sm"
+      >
+        <div class="flex items-center gap-3">
+          <span class="text-4xl font-semibold text-white">5+</span>
+          <span class="text-[#A0AEC0] text-sm leading-tight"
+            >Years<br />of Excellence</span
+          >
+        </div>
+        <div class="h-8 w-px bg-white/20"></div>
+        <div class="flex items-center gap-3">
+          <span class="text-4xl font-semibold text-white">240+</span>
+          <span class="text-[#A0AEC0] text-sm leading-tight"
+            >High-Net-Worth<br />Clients</span
+          >
+        </div>
+        <div class="h-8 w-px bg-white/20"></div>
+        <div class="flex items-center gap-3">
+          <span class="text-4xl font-semibold text-white">$1.2B</span>
+          <span class="text-[#A0AEC0] text-sm leading-tight"
+            >Assets<br />Advised</span
+          >
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-10 right-10 hidden lg:flex items-center gap-4 text-xs font-mono"
+      >
+        <div
+          class="px-5 py-2 bg-black/40 rounded-2xl border border-[#00D1FF]/30 flex items-center gap-2"
+        >
+          <span class="text-[#00D1FF]">LIVE</span>
+          <span class="animate-pulse">●</span>
+          BTC • ETH • SOL Markets
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-28 bg-[#0B0F1A]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span
+            class="text-[#6C5CE7] uppercase tracking-widest text-sm font-medium"
+            >What We Deliver</span
+          >
+          <h2 class="text-5xl font-semibold tracking-tighter mt-3">
+            Institutional-Grade Crypto Services
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            data-aos="fade-up"
+            class="service-card glass rounded-3xl p-10 group"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-[#6C5CE7] to-[#00D1FF] rounded-2xl flex items-center justify-center mb-8 text-3xl"
+            >
+              📊
+            </div>
+            <h3 class="text-2xl font-semibold mb-4">
+              Crypto Portfolio Management
+            </h3>
+            <p class="text-[#A0AEC0]">
+              Bespoke multi-asset allocation across Bitcoin, Ethereum, altcoins,
+              and stablecoins with daily rebalancing and tax optimization.
+            </p>
+            <div
+              class="mt-8 text-[#6C5CE7] group-hover:text-[#00D1FF] flex items-center gap-2 text-sm font-medium"
+            >
+              Learn more <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="service-card glass rounded-3xl p-10 group"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-[#6C5CE7] to-[#00D1FF] rounded-2xl flex items-center justify-center mb-8 text-3xl"
+            >
+              🔄
+            </div>
+            <h3 class="text-2xl font-semibold mb-4">
+              DeFi Strategy Consulting
+            </h3>
+            <p class="text-[#A0AEC0]">
+              Yield farming, liquidity provision, and advanced DeFi protocols
+              with risk-adjusted return modeling.
+            </p>
+            <div
+              class="mt-8 text-[#6C5CE7] group-hover:text-[#00D1FF] flex items-center gap-2 text-sm font-medium"
+            >
+              Learn more <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="service-card glass rounded-3xl p-10 group"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-[#6C5CE7] to-[#00D1FF] rounded-2xl flex items-center justify-center mb-8 text-3xl"
+            >
+              🖼️
+            </div>
+            <h3 class="text-2xl font-semibold mb-4">NFT Investment Advisory</h3>
+            <p class="text-[#A0AEC0]">
+              Blue-chip NFT collections, metaverse land, and IP strategy
+              tailored for collectors and institutions.
+            </p>
+            <div
+              class="mt-8 text-[#6C5CE7] group-hover:text-[#00D1FF] flex items-center gap-2 text-sm font-medium"
+            >
+              Learn more <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="service-card glass rounded-3xl p-10 group"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-[#6C5CE7] to-[#00D1FF] rounded-2xl flex items-center justify-center mb-8 text-3xl"
+            >
+              🛡️
+            </div>
+            <h3 class="text-2xl font-semibold mb-4">
+              Risk &amp; Security Analysis
+            </h3>
+            <p class="text-[#A0AEC0]">
+              On-chain risk scoring, wallet security audits, and
+              institutional-grade custody recommendations.
+            </p>
+            <div
+              class="mt-8 text-[#6C5CE7] group-hover:text-[#00D1FF] flex items-center gap-2 text-sm font-medium"
+            >
+              Learn more <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            class="service-card glass rounded-3xl p-10 group md:col-span-2 lg:col-span-1"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-[#6C5CE7] to-[#00D1FF] rounded-2xl flex items-center justify-center mb-8 text-3xl"
+            >
+              📋
+            </div>
+            <h3 class="text-2xl font-semibold mb-4">
+              US Tax &amp; Compliance Guidance
+            </h3>
+            <p class="text-[#A0AEC0]">
+              IRS-compliant reporting, 1099-DA preparation, wash-sale tracking,
+              and full regulatory alignment.
+            </p>
+            <div
+              class="mt-8 text-[#6C5CE7] group-hover:text-[#00D1FF] flex items-center gap-2 text-sm font-medium"
+            >
+              Learn more <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-28 bg-gradient-to-b from-[#0B0F1A] to-black">
+      <div
+        class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 items-center"
+      >
+        <div class="lg:col-span-6" data-aos="fade-right">
+          <div
+            class="inline-flex items-center gap-2 bg-white/5 px-5 py-2 rounded-3xl text-sm mb-6"
+          >
+            <i class="fa-solid fa-building-columns"></i>
+            Founded 2021 • New York
+          </div>
+          <h2 class="text-5xl font-semibold tracking-tighter leading-none mb-8">
+            Built by Wall Street veterans for the crypto era.
+          </h2>
+          <p class="text-[#A0AEC0] text-lg max-w-md">
+            Cryptivanta was founded by former Goldman Sachs derivatives traders
+            and early Bitcoin investors who saw the need for institutional-grade
+            crypto advisory in the United States.
+          </p>
+
+          <div class="mt-12 grid grid-cols-3 gap-6">
+            <div>
+              <div class="text-5xl font-semibold text-white">5+</div>
+              <div class="text-sm text-[#A0AEC0]">
+                Years of crypto expertise
+              </div>
+            </div>
+            <div>
+              <div class="text-5xl font-semibold text-white">240+</div>
+              <div class="text-sm text-[#A0AEC0]">High-net-worth clients</div>
+            </div>
+            <div>
+              <div class="text-5xl font-semibold text-white">$1.2B</div>
+              <div class="text-sm text-[#A0AEC0]">Assets under advisory</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6" data-aos="fade-left">
+          <div class="glass rounded-3xl p-12">
+            <h3 class="text-[#6C5CE7] font-medium tracking-widest mb-6">
+              OUR MISSION
+            </h3>
+            <p class="text-2xl leading-tight font-light">
+              To deliver the same level of strategic rigor, security, and
+              transparency that top-tier hedge funds demand — but made
+              accessible to serious individual investors and family offices.
+            </p>
+            <div
+              class="mt-10 pt-10 border-t border-white/10 text-sm flex items-center gap-4"
+            >
+              <img
+                src="https://picsum.photos/id/64/64"
+                alt="Founder"
+                class="w-10 h-10 rounded-2xl"
+              />
+              <div>
+                <div class="font-medium">Alex Rivera</div>
+                <div class="text-[#A0AEC0] text-xs">
+                  Founder &amp; Managing Partner
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="px-6 py-2 bg-white/5 rounded-3xl text-sm"
+            >Why Institutions &amp; HNWIs Choose Us</span
+          >
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <div data-aos="fade-up" class="text-center">
+            <div
+              class="mx-auto w-16 h-16 bg-[#6C5CE7]/10 text-[#6C5CE7] flex items-center justify-center rounded-3xl text-4xl mb-6"
+            >
+              🇺🇸
+            </div>
+            <h4 class="font-semibold mb-3">US Market Expertise</h4>
+            <p class="text-sm text-[#A0AEC0]">
+              Deep knowledge of SEC, IRS, and CFTC regulations.
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100" class="text-center">
+            <div
+              class="mx-auto w-16 h-16 bg-[#00D1FF]/10 text-[#00D1FF] flex items-center justify-center rounded-3xl text-4xl mb-6"
+            >
+              🔒
+            </div>
+            <h4 class="font-semibold mb-3">Institutional Security</h4>
+            <p class="text-sm text-[#A0AEC0]">
+              Multi-signature custody, audited smart contracts, zero-knowledge
+              reporting.
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200" class="text-center">
+            <div
+              class="mx-auto w-16 h-16 bg-emerald-400/10 text-emerald-400 flex items-center justify-center rounded-3xl text-4xl mb-6"
+            >
+              📈
+            </div>
+            <h4 class="font-semibold mb-3">Data-Driven Alpha</h4>
+            <p class="text-sm text-[#A0AEC0]">
+              Proprietary on-chain analytics and machine-learning models.
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" class="text-center">
+            <div
+              class="mx-auto w-16 h-16 bg-amber-400/10 text-amber-400 flex items-center justify-center rounded-3xl text-4xl mb-6"
+            >
+              📊
+            </div>
+            <h4 class="font-semibold mb-3">Proven Performance</h4>
+            <p class="text-sm text-[#A0AEC0]">
+              Average client portfolio outperformed BTC by 38% in 2024–2025.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-28 bg-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-5xl font-semibold tracking-tighter text-center mb-16">
+          What Our Clients Say
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div data-aos="fade-up" class="glass p-8 rounded-3xl">
+            <div class="flex gap-1 text-amber-400 mb-6">★★★★★</div>
+            <p class="text-lg">
+              "Cryptivanta turned my scattered holdings into a disciplined,
+              tax-efficient portfolio that outperformed the market by 47% in
+              2025. Their US compliance team is unmatched."
+            </p>
+            <div class="flex items-center gap-4 mt-10">
+              <img
+                src="https://picsum.photos/id/201/64"
+                class="w-12 h-12 rounded-2xl"
+                alt=""
+              />
+              <div>
+                <div class="font-medium">Michael Chen</div>
+                <div class="text-xs text-[#A0AEC0]">
+                  Silicon Valley Founder • $18M portfolio
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="glass p-8 rounded-3xl"
+          >
+            <div class="flex gap-1 text-amber-400 mb-6">★★★★★</div>
+            <p class="text-lg">
+              "The level of sophistication is what you’d expect from a
+              multi-billion hedge fund — except they actually return my calls.
+              Best decision I made this year."
+            </p>
+            <div class="flex items-center gap-4 mt-10">
+              <img
+                src="https://picsum.photos/id/64/64"
+                class="w-12 h-12 rounded-2xl"
+                alt=""
+              />
+              <div>
+                <div class="font-medium">Sarah Patel</div>
+                <div class="text-xs text-[#A0AEC0]">
+                  Family Office • Miami, FL
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="glass p-8 rounded-3xl"
+          >
+            <div class="flex gap-1 text-amber-400 mb-6">★★★★★</div>
+            <p class="text-lg">
+              "Their risk model saved me from the FTX collapse. The team’s
+              on-chain forensics and regulatory foresight are second to none."
+            </p>
+            <div class="flex items-center gap-4 mt-10">
+              <img
+                src="https://picsum.photos/id/29/64"
+                class="w-12 h-12 rounded-2xl"
+                alt=""
+              />
+              <div>
+                <div class="font-medium">David Thompson</div>
+                <div class="text-xs text-[#A0AEC0]">
+                  Hedge Fund CIO • New York
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section id="insights" class="py-28">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-end mb-12">
+          <div>
+            <span class="text-[#6C5CE7] text-sm font-medium"
+              >CRYPTO INTELLIGENCE</span
+            >
+            <h2 class="text-5xl font-semibold tracking-tighter">
+              Latest Insights
+            </h2>
+          </div>
+          <a
+            href="#"
+            class="text-[#00D1FF] flex items-center gap-2 text-sm font-medium"
+            >View all research →</a
+          >
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass rounded-3xl overflow-hidden">
+            <div
+              class="h-56 bg-gradient-to-br from-purple-900/50 to-cyan-900/30 flex items-center justify-center text-6xl"
+            >
+              📉
+            </div>
+            <div class="p-8">
+              <div class="text-xs text-[#A0AEC0]">March 18, 2026</div>
+              <h4 class="font-semibold text-xl mt-3 leading-tight">
+                Why Bitcoin ETFs are about to trigger the next institutional
+                wave
+              </h4>
+              <p class="text-sm text-[#A0AEC0] mt-4 line-clamp-3">
+                Our latest analysis on ETF inflows, custody trends, and what it
+                means for US-based investors.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass rounded-3xl overflow-hidden">
+            <div
+              class="h-56 bg-gradient-to-br from-purple-900/50 to-cyan-900/30 flex items-center justify-center text-6xl"
+            >
+              🔗
+            </div>
+            <div class="p-8">
+              <div class="text-xs text-[#A0AEC0]">March 12, 2026</div>
+              <h4 class="font-semibold text-xl mt-3 leading-tight">
+                DeFi 2.0: The rise of real-world asset tokenization
+              </h4>
+              <p class="text-sm text-[#A0AEC0] mt-4 line-clamp-3">
+                How RWAs are changing the game and which protocols we recommend
+                for 2026.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass rounded-3xl overflow-hidden">
+            <div
+              class="h-56 bg-gradient-to-br from-purple-900/50 to-cyan-900/30 flex items-center justify-center text-6xl"
+            >
+              📋
+            </div>
+            <div class="p-8">
+              <div class="text-xs text-[#A0AEC0]">March 5, 2026</div>
+              <h4 class="font-semibold text-xl mt-3 leading-tight">
+                2026 Tax Guide: What every US crypto investor must know
+              </h4>
+              <p class="text-sm text-[#A0AEC0] mt-4 line-clamp-3">
+                New IRS rules, 1099-DA changes, and how to stay compliant
+                without sacrificing returns.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-28 bg-[#0B0F1A]">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-5xl font-semibold tracking-tighter text-center mb-16">
+          Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-4">
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">Do you only work with US clients?</div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                Yes. We are fully US-based and specialize exclusively in
+                US-compliant strategies.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">What is the minimum portfolio size?</div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                We typically work with clients who have $750,000+ in digital
+                assets.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">How are fees structured?</div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                Management fees are performance-based with a low fixed
+                component. Full transparency guaranteed.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">
+                Are your strategies compliant with current US regulations?
+              </div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                Yes. All recommendations strictly adhere to SEC, CFTC, FinCEN,
+                and IRS guidelines. We track evolving regulations (including the
+                Infrastructure Investment and Jobs Act, proposed SAB 121
+                changes, and upcoming 1099-DA broker reporting rules) and adjust
+                client strategies accordingly.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">
+                Do you provide custody or hold client assets?
+              </div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                No. We are a pure advisory firm. We do not take custody of funds
+                or assets. We work with institutional-grade qualified custodians
+                (such as Coinbase Custody, Fidelity Digital Assets, Anchorage
+                Digital, or Fireblocks) that our clients already use or that we
+                help select.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">
+                What kind of performance data do you share?
+              </div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                We provide personalized performance attribution and
+                risk-adjusted return analysis for each client. Publicly, we
+                share only anonymized, aggregate, time-weighted returns that
+                comply with GIPS-like standards and are verified by third-party
+                accountants when disclosed.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">
+                How do you handle crypto tax reporting for US clients?
+              </div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                We provide detailed transaction-level cost-basis tracking,
+                FIFO/LIFO/HIFO optimization recommendations, wash-sale
+                identification (where applicable), and prepare client-ready data
+                exports compatible with TurboTax, CoinTracker, Koinly, and
+                professional tax software. We do not file taxes directly but
+                work closely with your CPA.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">
+                What happens if I want to pause or terminate the advisory
+                relationship?
+              </div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                You may terminate at any time with 30 days’ written notice.
+                There are no lock-up periods or early termination fees on
+                monthly plans. Upon termination we provide a final portfolio
+                report and 90 days of continued access to our client portal for
+                transition purposes.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">
+                Do you offer personalized on-chain security audits?
+              </div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                Yes — for Professional and Enterprise clients. We perform wallet
+                lineage analysis, address clustering checks, exposure scanning
+                (OFAC/SDN lists, mixer/tumbler history), and recommend multi-sig
+                / MPC setups when appropriate.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+
+          <div
+            onclick="
+              this.querySelector('.faq-answer').classList.toggle('hidden');
+              this.querySelector('i').classList.toggle('rotate-180');
+            "
+            class="glass rounded-3xl p-8 cursor-pointer flex justify-between items-start"
+          >
+            <div>
+              <div class="font-medium">How confidential is my information?</div>
+              <div class="faq-answer hidden text-[#A0AEC0] mt-4">
+                Extremely. We operate under strict NDAs, use end-to-end
+                encryption, zero-knowledge proofs for certain reporting
+                workflows, and maintain SOC 2 Type II controls. We never sell
+                data and we are not subject to routine subpoena fishing
+                expeditions common with custodial platforms.
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section
+      id="contact"
+      class="py-28 bg-gradient-to-b from-black to-[#0B0F1A]"
+    >
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+        <div data-aos="fade-right">
+          <h2 class="text-5xl font-semibold tracking-tighter">
+            Ready for your strategic edge?
+          </h2>
+          <p class="text-[#A0AEC0] mt-6 text-lg">
+            Book a confidential 30-minute strategy call with our team.
+          </p>
+
+          <div class="mt-12 space-y-8">
+            <div class="flex gap-6">
+              <i class="fa-solid fa-map-marker-alt text-3xl text-[#00D1FF]"></i>
+              <div>
+                <div class="font-medium">123 Wall Street, 14th Floor</div>
+                <div class="text-xs text-[#A0AEC0]">New York, NY 10005</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" class="glass rounded-3xl p-10">
+          <form
+            onsubmit="
+              event.preventDefault();
+              alert('Thank you! We will contact you within 4 hours.');
+            "
+            class="space-y-8"
+          >
+            <div>
+              <input
+                type="text"
+                placeholder="Full Name"
+                required
+                class="w-full bg-transparent border-b border-white/30 focus:border-white py-4 outline-none text-lg"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Email Address"
+                required
+                class="w-full bg-transparent border-b border-white/30 focus:border-white py-4 outline-none text-lg"
+              />
+            </div>
+            <div>
+              <textarea
+                placeholder="Tell us about your portfolio goals..."
+                rows="4"
+                required
+                class="w-full bg-transparent border-b border-white/30 focus:border-white py-4 outline-none resize-none"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full py-7 bg-gradient-to-r from-[#6C5CE7] via-[#6C5CE7] to-[#00D1FF] rounded-3xl text-xl font-semibold hover:scale-[1.03] transition"
+            >
+              Send Message &amp; Book Call
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-20 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-y-12">
+        <div class="md:col-span-5">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-9 h-9 rounded-2xl bg-gradient-to-br from-[#6C5CE7] to-[#00D1FF] flex items-center justify-center text-3xl font-bold logo-font"
+            >
+              C
+            </div>
+            <span class="text-3xl font-semibold tracking-tighter logo-font"
+              >Cryptivanta</span
+            >
+          </div>
+          <p class="text-[#A0AEC0] max-w-xs">
+            "Your Strategic Edge in Crypto Markets"
+          </p>
+
+          <div class="flex gap-6 mt-12">
+            <i
+              class="fa-brands fa-x-twitter text-2xl cursor-pointer hover:text-[#00D1FF]"
+            ></i>
+            <i
+              class="fa-brands fa-linkedin text-2xl cursor-pointer hover:text-[#00D1FF]"
+            ></i>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <div class="font-medium mb-6">Quick Links</div>
+          <div class="space-y-3 text-sm text-[#A0AEC0]">
+            <a href="#services" class="block hover:text-white">Services</a>
+            <a href="#about" class="block hover:text-white">About</a>
+            <a href="#pricing" class="block hover:text-white">Pricing</a>
+            <a href="#insights" class="block hover:text-white">Insights</a>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 text-right md:text-left">
+          <div
+            class="text-xs text-[#A0AEC0] leading-relaxed max-w-xs md:ml-auto"
+          >
+            Cryptivanta LLC is not a registered investment advisor. Past
+            performance is not indicative of future results.<br />
+            Investing in cryptocurrency involves substantial risk of loss.<br /><br />
+            © 2026 Cryptivanta. All rights reserved.<br />
+            <span class="underline cursor-pointer">Privacy Policy</span> •
+            <span class="underline cursor-pointer">Terms of Service</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Tailwind script
+      function initializeTailwind() {
+        tailwind.config = {
+          content: [],
+          theme: {
+            extend: {},
+          },
+        };
+      }
+
+      // Mobile menu
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("hidden");
+      }
+
+      // AOS initialization
+      window.addEventListener("load", () => {
+        initializeTailwind();
+        AOS.init({
+          duration: 900,
+          once: true,
+        });
+
+        // Add active class to monthly by default
+        document
+          .getElementById("monthlyBtn")
+          .classList.add("bg-white/10", "active-tab");
+
+        // Keyboard escape for mobile menu
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            const menu = document.getElementById("mobileMenu");
+            if (!menu.classList.contains("hidden")) toggleMobileMenu();
+          }
+        });
+      });
+
+      // Add some subtle scroll glow effect to header
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 100) {
+          header.style.boxShadow = "0 10px 30px -15px rgba(108, 92, 231, 0.3)";
+        } else {
+          header.style.boxShadow = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
