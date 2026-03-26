@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Cryptivanta</title>
+  <meta name="description" content="Cryptivanta Privacy Policy - How we protect your data as elite crypto consultants for US investors." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap");
+    :root {
+      --primary: #6c5ce7;
+      --accent: #00d1ff;
+    }
+    body {
+      font-family: "Inter", system_ui, sans-serif;
+    }
+    .logo-font {
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-[#0B0F1A] text-white overflow-x-hidden">
+
+  <!-- HEADER -->
+      <header class="sticky top-0 z-50 glass border-b border-white/10">
+      <div
+        class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div
+            class="w-9 h-9 rounded-2xl bg-gradient-to-br from-[#6C5CE7] to-[#00D1FF] flex items-center justify-center text-2xl font-bold logo-font"
+          >
+            C
+          </div>
+          <div>
+            <span
+              class="text-3xl font-semibold tracking-tighter logo-font text-white"
+              >Cryptivanta</span
+            >
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center gap-10 text-sm font-medium">
+          <a href="/#home" class="nav-link">Home</a>
+          <a href="/#services" class="nav-link">Services</a>
+          <a href="/#about" class="nav-link">About</a>
+          <a href="/#pricing" class="nav-link">Pricing</a>
+          <a href="/#insights" class="nav-link">Insights</a>
+          <a href="/#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <button
+            onclick="
+              document
+                .getElementById('contact')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+            class="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/30 rounded-2xl text-sm font-medium transition-all"
+          >
+            Book Consultation
+          </button>
+          <button
+            onclick="toggleMobileMenu()"
+            class="md:hidden w-10 h-10 flex items-center justify-center text-2xl"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden fixed inset-0 bg-[#0B0F1A] z-50 pt-20 px-6"
+      >
+        <div class="flex flex-col gap-6 text-lg font-medium">
+          <a
+            href="/#home"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >Home</a
+          >
+          <a
+            href="/#services"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >Services</a
+          >
+          <a
+            href="/#about"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >About</a
+          >
+          <a
+            href="/#pricing"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >Pricing</a
+          >
+          <a
+            href="/#insights"
+            onclick="toggleMobileMenu()"
+            class="py-3 border-b border-white/10"
+            >Insights</a
+          >
+          <a href="/#contact" onclick="toggleMobileMenu()" class="py-3"
+            >Contact</a
+          >
+          <button
+            onclick="
+              toggleMobileMenu();
+              document
+                .getElementById('contact')
+                .scrollIntoView({ behavior: 'smooth' });
+            "
+            class="mt-6 w-full py-4 bg-gradient-to-r from-[#6C5CE7] to-[#00D1FF] rounded-3xl font-semibold text-lg"
+          >
+            Book a Consultation
+          </button>
+        </div>
+      </div>
+    </header>
+
+  <section class="py-24">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-3xl px-6 py-2 text-sm mb-6">
+          Last Updated: March 26, 2026
+        </div>
+        <h1 class="text-6xl font-semibold tracking-tighter logo-font">Privacy Policy</h1>
+        <p class="text-[#A0AEC0] mt-4 text-xl">Your privacy is our priority.</p>
+      </div>
+
+      <div class="glass rounded-3xl p-10 md:p-16 prose prose-invert max-w-none text-[#A0AEC0]">
+        <p>Cryptivanta LLC ("Cryptivanta", "we", "us", or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage with our elite crypto consulting services for high-net-worth and institutional clients in the United States.</p>
+
+        <h2 class="text-3xl font-semibold text-white mt-12 mb-6">1. Information We Collect</h2>
+        <ul class="list-disc pl-6 space-y-3">
+          <li><strong>Personal Information:</strong> Name, email, phone number, financial details (portfolio size, investment goals, risk tolerance), tax identification, and any information provided during consultations or onboarding.</li>
+          <li><strong>Usage Data:</strong> IP address, browser type, device information, and site usage collected via cookies and analytics tools.</li>
+        </ul>
+
+        <h2 class="text-3xl font-semibold text-white mt-12 mb-6">2. How We Use Your Information</h2>
+        <p>We use your information to:</p>
+        <ul class="list-disc pl-6 space-y-3">
+          <li>Provide personalized crypto portfolio management, DeFi strategy, risk analysis, and US tax & compliance guidance.</li>
+          <li>Communicate with you about services, reports, and market insights.</li>
+          <li>Comply with legal obligations as a US-based crypto advisory firm (including AML, KYC, and regulatory reporting).</li>
+        </ul>
+
+        <h2 class="text-3xl font-semibold text-white mt-12 mb-6">3. Information Sharing</h2>
+        <p>We do not sell your personal data. We may share it with:</p>
+        <ul class="list-disc pl-6 space-y-3">
+          <li>Trusted third-party service providers (qualified custodians, tax software platforms, analytics providers) under strict confidentiality agreements.</li>
+          <li>Regulatory authorities when required by law (SEC, IRS, FinCEN, etc.).</li>
+        </ul>
+
+        <h2 class="text-3xl font-semibold text-white mt-12 mb-6">4. Data Security</h2>
+        <p>We implement industry-leading security measures including end-to-end encryption, SOC 2 controls, and zero-knowledge technologies where applicable. However, no system is 100% secure, especially in the evolving crypto landscape.</p>
+
+        <h2 class="text-3xl font-semibold text-white mt-12 mb-6">5. Your Rights</h2>
+        <p>You have the right to access, correct, or request deletion of your personal information. California residents may have additional rights under CCPA/CPRA. Contact us to exercise these rights.</p>
+
+        <h2 class="text-3xl font-semibold text-white mt-12 mb-6">6. Cookies</h2>
+        <p>We use essential cookies for website functionality. You can manage preferences through your browser settings.</p>
+
+        <h2 class="text-3xl font-semibold text-white mt-12 mb-6">Contact Us</h2>
+        <p class="font-medium">Email: <a href="mailto:contact@cryptivanta.com" class="text-[#00D1FF] hover:underline">contact@cryptivanta.com</a><br>
+        Cryptivanta LLC • 123 Wall Street, 14th Floor, New York, NY 10005</p>
+
+        <div class="mt-16 p-8 bg-white/5 rounded-2xl border border-white/10 text-sm">
+          <p><strong>Disclaimer:</strong> This Privacy Policy is for informational purposes. Cryptivanta is not a registered investment adviser. Cryptocurrency involves substantial risk of loss.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- FOOTER -->
+    <footer class="bg-black py-20 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-y-12">
+        <div class="md:col-span-5">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-9 h-9 rounded-2xl bg-gradient-to-br from-[#6C5CE7] to-[#00D1FF] flex items-center justify-center text-3xl font-bold logo-font"
+            >
+              C
+            </div>
+            <span class="text-3xl font-semibold tracking-tighter logo-font"
+              >Cryptivanta</span
+            >
+          </div>
+          <p class="text-[#A0AEC0] max-w-xs">
+            "Your Strategic Edge in Crypto Markets"
+          </p>
+
+          <div class="flex gap-6 mt-12">
+            <i
+              class="fa-brands fa-x-twitter text-2xl cursor-pointer hover:text-[#00D1FF]"
+            ></i>
+            <i
+              class="fa-brands fa-linkedin text-2xl cursor-pointer hover:text-[#00D1FF]"
+            ></i>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <div class="font-medium mb-6">Quick Links</div>
+          <div class="space-y-3 text-sm text-[#A0AEC0]">
+            <a href="/#services" class="block hover:text-white">Services</a>
+            <a href="/#about" class="block hover:text-white">About</a>
+            <a href="/#pricing" class="block hover:text-white">Pricing</a>
+            <a href="/#insights" class="block hover:text-white">Insights</a>
+            <a href="./privacy-policy.html" class="block hover:text-white">Privacy</a>
+            <a href="./terms-conditions.html" class="block hover:text-white">Terms</a>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 text-right md:text-left">
+          <div
+            class="text-xs text-[#A0AEC0] leading-relaxed max-w-xs md:ml-auto"
+          >
+            Cryptivanta LLC is not a registered investment advisor. Past
+            performance is not indicative of future results.<br />
+            Investing in cryptocurrency involves substantial risk of loss.<br /><br />
+            © 2026 Cryptivanta. All rights reserved.<br />
+            <span class="underline cursor-pointer">Privacy Policy</span> •
+            <span class="underline cursor-pointer">Terms of Service</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
